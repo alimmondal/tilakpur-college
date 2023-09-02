@@ -1,0 +1,48 @@
+.aboutUs {
+  height: 100vh;
+  /* width: 100vw; */
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  /* overflow: hidden; */
+}
+.aboutUs img {
+  width: 525px;
+  height: 350px;
+  object-fit: cover;
+}
+.aboutUs p {
+  font-size: 17px;
+  text-align: justify;
+}
+
+.aboutUs h2 {
+  font-size: 48px;
+  letter-spacing: 9px;
+  font-family: fantasy;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .aboutUs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .aboutUs img {
+    width: 325px;
+    height: 180px;
+    object-fit: cover;
+  }
+  .aboutUs h2 {
+    font-size: 20px;
+    margin-bottom: -100px;
+    letter-spacing: none;
+    text-align: center;
+  }
+  .aboutUs p {
+    font-size: 15px;
+    text-align: justify;
+  }
+}

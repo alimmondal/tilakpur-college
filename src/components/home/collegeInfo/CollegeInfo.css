@@ -1,0 +1,50 @@
+.infoContainer {
+  position: relative;
+  z-index: 3;
+  margin-top: -70px;
+}
+.infoContainer h5 {
+  font-family: 'Font Awesome 5 Free';
+}
+.cInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.cInfo p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.icons {
+  color: #fff;
+  font-size: 120px;
+  background: #9413d8;
+  padding: 30px;
+  border-radius: 50%;
+}
+.icon {
+  color: #fff;
+  font-size: 80px;
+  background: #d82a13;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .infoContainer {
+    margin-top: -90px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 480px) {
+  .infoContainer {
+    margin-top: -50px;
+  }
+  .collegeInfo {
+    flex-wrap: wrap;
+  }
+}

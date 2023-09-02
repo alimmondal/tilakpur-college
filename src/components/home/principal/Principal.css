@@ -1,0 +1,77 @@
+.principal {
+  /* padding: 0 5%; */
+}
+.pContainer {
+  padding-top: 50px;
+}
+.imgDiv img {
+  /* margin-right: inherit; */
+  /* width: 300px;
+  height: 300px; */
+}
+.imgDiv1 {
+  margin-right: inherit;
+  /* display: none; */
+}
+.pContainer img {
+  /* width: 100%;*/
+  object-fit: cover;
+  width: 350px;
+  height: 390px;
+}
+
+.pWord {
+  background-color: #3c5266;
+  color: #fff;
+  width: 75%;
+  /* display: inline-block; */
+  padding: 35px;
+}
+
+.pWord p {
+  /* width: 100%; */
+  font-size: 17px;
+}
+
+.signature {
+  float: right;
+  font-family: cursive;
+}
+
+@media screen and (max-width: 768px) {
+  .pContainer {
+    flex-direction: column-reverse;
+    height: 100vh;
+    margin-top: 200px;
+    /* overflow: hidden; */
+  }
+  .pContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pContainer {
+    /* flex-wrap: wrap; */
+  }
+  .pWord {
+    padding: 10px;
+    width: 100%;
+  }
+  .pWord p {
+    font-size: 12px;
+    /* margin-right: inherit; */
+  }
+
+  .imgDiv1 {
+    /* display: inline-block; */
+  }
+  .imgDiv {
+    /* margin-right: inherit;
+    display: none; */
+    width: 100%;
+
+    /* object-fit: cover; */
+  }
+}
