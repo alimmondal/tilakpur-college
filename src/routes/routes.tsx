@@ -1,14 +1,13 @@
 import App from '@/App';
-// import Checkout from '@/pages/Checkout';
+import AboutUs from '@/pages/AboutUs';
+import Contact from '@/pages/Contact';
+import HSCRoutine from '@/pages/HSCRoutine';
 import Home from '@/pages/Home';
 import Login from '@/pages/Login';
 import NotFound from '@/pages/NotFound';
-// import ProductDetails from '@/pages/ProductDetails';
-// import Products from '@/pages/Products';
 import Signup from '@/pages/Signup';
+import TeachersList from '@/pages/TeachersList';
 import { createBrowserRouter } from 'react-router-dom';
-// import PrivateRoutes from './PrivateRoute';
-// import PrivateRoute from './PrivateRoute';
 
 const routes = createBrowserRouter([
   {
@@ -20,12 +19,20 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/products',
-        // element: <Products />,
+        path: '/teacher-list',
+        element: <TeachersList />,
       },
       {
-        path: '/product-details/:id',
-        // element: <ProductDetails />,
+        path: '/contact',
+        element: <Contact />,
+      },
+      {
+        path: '/about',
+        element: <AboutUs />,
+      },
+      {
+        path: '/hsc',
+        element: <HSCRoutine />,
       },
       {
         path: '/checkout',
@@ -37,6 +44,7 @@ const routes = createBrowserRouter([
       },
     ],
   },
+
   {
     path: '/login',
     element: <Login />,

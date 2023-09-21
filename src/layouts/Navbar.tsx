@@ -13,9 +13,9 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="w-full h-16 fixed top backdrop-blur-lg z-10">
-      <div className="h-full w-full bg-white/60">
-        <div className="flex items-center justify-between w-full md:max-w-7xl h-full mx-auto ">
+    <nav className="w-full h-16 fixed top  z-10">
+      <div className="h-full w-full bg-black">
+        <div className="flex items-center justify-between w-full md:max-w-7xl h-full mx-auto text-white">
           <div className="flex gap-3 items-center justify-center">
             <BiBookReader className="text-white text-5xl" />
             <h1 className="text-white text-2xl">Tdc</h1>
@@ -23,30 +23,48 @@ export default function Navbar() {
           <div>
             <ul className="flex items-center">
               <li>
-                <Button variant="link" asChild>
+                <Button className="text-white" variant="link" asChild>
                   <Link to="/">Home</Link>
                 </Button>
               </li>
               <li>
-                <Button variant="link" asChild>
+                <Button className="text-white" variant="link" asChild>
                   <Link to="/teacher-list">Our Teachers' List</Link>
                 </Button>
               </li>
               <li>
-                <Button variant="link" asChild>
-                  <Link to="/checkout">Contact Us</Link>
+                <Button className="text-white" variant="link" asChild>
+                  <Link to="/contact">Contact Us</Link>
                 </Button>
               </li>
               <li>
-                <Button variant="link" asChild>
-                  <Link to="/checkout">About Us</Link>
+                <Button className="text-white" variant="link" asChild>
+                  <Link to="/about">About Us</Link>
                 </Button>
               </li>
-              {/* <li>
-                <Button variant="ghost">
-                  <HiOutlineSearch size="25" />
-                </Button>
-              </li>  */}
+              <li className="ml-5">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="outline-none">
+                    Routine
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuSeparator />
+                    <Link to="/hsc">
+                      <DropdownMenuItem className="cursor-pointer">
+                        Degree Routine
+                      </DropdownMenuItem>
+                    </Link>
+                    <Link to="/hsc">
+                      <DropdownMenuItem className="cursor-pointer">
+                        HSC Routine
+                      </DropdownMenuItem>
+                    </Link>
+                    <DropdownMenuItem className="cursor-pointer">
+                      Exam Routine
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </li>
 
               <li className="ml-5">
                 <DropdownMenu>
@@ -62,9 +80,6 @@ export default function Navbar() {
                     <DropdownMenuItem className="cursor-pointer">
                       Profile
                     </DropdownMenuItem>
-
-                    {/* {!user.email && ( */}
-                    {/* <> */}
                     <Link to="/login">
                       <DropdownMenuItem className="cursor-pointer">
                         Login
@@ -75,16 +90,9 @@ export default function Navbar() {
                         Sign Up
                       </DropdownMenuItem>
                     </Link>
-                    {/* </> */}
-                    {/* )} */}
-                    {/* {user.email && ( */}
-                    <DropdownMenuItem
-                      // onClick={handleLogout}
-                      className="cursor-pointer"
-                    >
+                    <DropdownMenuItem className="cursor-pointer">
                       Logout
                     </DropdownMenuItem>
-                    {/* )} */}
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
