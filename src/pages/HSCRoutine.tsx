@@ -12,9 +12,9 @@ const HSCRoutine = () => {
       className=" "
     >
       <div className=" ">
-        <h1 className="text-center text-5xl mt-60">Class Routine</h1>
-        <h1 className="text-center text-1xl ">HSC</h1>
-        <img src={routine} alt="" className="mt-10" />
+        <h1 className="text-center text-1xl mt-60">HSC</h1>
+        <h1 className="text-center text-5xl ">Class Routine</h1>
+        <img src={routine} alt="" className="px-28 mt-10" />
       </div>
     </div>
   );

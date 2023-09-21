@@ -1,4 +1,4 @@
-import about from '../assets/image/about.jpg';
+import about from '../assets/image/aboutCollege.jpg';
 const AboutUs = () => {
   return (
     <div
@@ -7,14 +7,14 @@ const AboutUs = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh',
-        overflow: 'hidden',
+        // height: '100vh',
+        // overflow: 'hidden',
       }}
       className=" "
     >
       <h1 className="text-center text-5xl mt-60">About Us</h1>
-      <div style={{ width: '95%', height: '95%', overflow: 'scroll' }}>
-        <img src={about} alt="" className="" />
+      <div style={{ width: '95%', height: '95%' }}>
+        <img src={about} alt="" className="pt-10" />
       </div>
     </div>
   );
