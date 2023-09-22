@@ -3,7 +3,6 @@
 type Info = {
   title: string;
   description: string;
-  background: string;
   email?: string;
 };
 
@@ -13,12 +12,10 @@ interface ContactInfoProps {
 const ContactInfo: React.FC<ContactInfoProps> = ({ info }) => {
   return (
     <div className="text-black info-card">
-      <div className="flex flex-row items-center justify-center info-container">
-        <div className="">
-          <h1>This is our image</h1>
-        </div>
+      {/* <p className="text-5xl">Contact us for more information</p> */}
+      <div className="info-container">
         <div>
-          <h6>{info.title}</h6>
+          <h6 className="text-2xl font-bold">{info.title}</h6>
           <h6>{info.description}</h6>
           <p>{info.email}</p>
         </div>

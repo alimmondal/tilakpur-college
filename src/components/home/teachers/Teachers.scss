@@ -263,6 +263,9 @@
     .slick-dots {
       bottom: -5vw;
     }
+    .slick-dots li button {
+      display: none;
+    }
   }
 
   .details {

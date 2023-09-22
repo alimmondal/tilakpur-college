@@ -12,30 +12,23 @@ const HeroSection = () => {
   };
   return (
     <div>
-      <div className="heroContainer">
-        <div className="heroBg">
-          {/* <video className="videoBg" >
-                        <source src={video} loop muted autoplay controls type="video/mp4" />
-                    </video> */}
-          <video
-            className="videoBg"
-            src={video}
-            autoPlay
-            loop
-            muted
-            // type="video/mp4"
-          />
+      <div className="heroContainer mt-14">
+        <div className="heroBg ">
+          <video className="videoBg" src={video} autoPlay loop muted />
         </div>
-        <div className="heroContent">
+        <div className="heroContent ">
           <p>
             <i style={{ color: '' }} className="fa fa-book-reader heroIcon"></i>
           </p>
+          {/* <h1>
+            স্বাগতম <br /> তিলকপুর মহাবিদ্যালয়
+          </h1> */}
           <h1>
-            Wellcom to <br /> Tilakpur Degree College
+            Welcome to <br /> Tilakpur Degree College
           </h1>
           <p>we aim at creating real talents</p>
-          <div className="heroBtnWrapper">
-            <Link to="/contactUs">
+          <div className="heroBtnWrapper mt-10">
+            <Link to="/contact">
               <button
                 className="mainBtn "
                 onMouseEnter={onHover}

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/Fa';
 import { BiBookReader } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
@@ -10,63 +12,85 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '../components/ui/dropdown-menu';
+import './Navbar.css';
 
 export default function Navbar() {
+  const [click, setClick] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   return (
-    <nav className="w-full h-16 fixed top  z-10">
-      <div className="h-full w-full bg-black">
-        <div className="flex items-center justify-between w-full md:max-w-7xl h-full mx-auto text-white">
-          <div className="flex gap-3 items-center justify-center">
-            <BiBookReader className="text-white text-5xl" />
+    <nav className={navbar ? 'navbars active' : 'navbars'}>
+      <div className="navbars-container">
+        <div className="flex items-center justify-evenly w-full md:max-w-7xl h-full mx-20 text-white">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <BiBookReader className="text-white text-4xl" />
             <h1 className="text-white text-2xl">Tdc</h1>
+          </Link>
+
+          <div className="menu-icon" onClick={handleClick}>
+            {click ? <FaTimes /> : <FaBars />}
           </div>
           <div>
-            <ul className="flex items-center">
-              <li>
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+              <li className="nav-item">
                 <Button className="text-white" variant="link" asChild>
-                  <Link to="/">Home</Link>
+                  <Link to="/" onClick={closeMobileMenu}>
+                    Home
+                  </Link>
                 </Button>
               </li>
-              <li>
+
+              <li className="nav-item">
                 <Button className="text-white" variant="link" asChild>
-                  <Link to="/teacher-list">Our Teachers' List</Link>
+                  <Link to="/teacher-list" onClick={closeMobileMenu}>
+                    Our Teachers' List
+                  </Link>
                 </Button>
               </li>
-              <li>
+              <li className="nav-item">
                 <Button className="text-white" variant="link" asChild>
-                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/contact" onClick={closeMobileMenu}>
+                    Contact Us
+                  </Link>
                 </Button>
               </li>
-              <li>
+              <li className="nav-item">
                 <Button className="text-white" variant="link" asChild>
-                  <Link to="/about">About Us</Link>
+                  <Link to="/about" onClick={closeMobileMenu}>
+                    About Us
+                  </Link>
                 </Button>
               </li>
-              <li className="ml-5">
+
+              <li className="nav-item ml-5 ">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="outline-none">
                     Routine
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent>
+                  <DropdownMenuContent className="bg-black text-white">
                     <DropdownMenuSeparator />
-                    <Link to="/hsc">
+                    <Link to="/hsc" onClick={closeMobileMenu}>
                       <DropdownMenuItem className="cursor-pointer">
                         Degree Routine
                       </DropdownMenuItem>
                     </Link>
-                    <Link to="/hsc">
+                    <Link to="/hsc" onClick={closeMobileMenu}>
                       <DropdownMenuItem className="cursor-pointer">
                         HSC Routine
                       </DropdownMenuItem>
                     </Link>
-                    <DropdownMenuItem className="cursor-pointer">
-                      Exam Routine
-                    </DropdownMenuItem>
+                    <Link to="/hsc" onClick={closeMobileMenu}>
+                      <DropdownMenuItem className="cursor-pointer">
+                        Exam Routine
+                      </DropdownMenuItem>
+                    </Link>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
-
-              <li className="ml-5">
+              <li className="nav-item ml-5">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="outline-none">
                     <Avatar>
@@ -80,19 +104,21 @@ export default function Navbar() {
                     <DropdownMenuItem className="cursor-pointer">
                       Profile
                     </DropdownMenuItem>
-                    <Link to="/login">
+                    <Link to="/login" onClick={closeMobileMenu}>
                       <DropdownMenuItem className="cursor-pointer">
                         Login
                       </DropdownMenuItem>
                     </Link>
-                    <Link to="/signup">
+                    <Link to="/signup" onClick={closeMobileMenu}>
                       <DropdownMenuItem className="cursor-pointer">
                         Sign Up
                       </DropdownMenuItem>
                     </Link>
-                    <DropdownMenuItem className="cursor-pointer">
-                      Logout
-                    </DropdownMenuItem>
+                    <Link to="/hsc" onClick={closeMobileMenu}>
+                      <DropdownMenuItem className="cursor-pointer">
+                        Logout
+                      </DropdownMenuItem>
+                    </Link>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
