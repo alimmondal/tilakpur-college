@@ -15,12 +15,12 @@ const TeachersList = () => {
       className=" "
     >
       <div className=" ">
-        <h1 className="text-center text-5xl mt-60">Teachers' List</h1>
+        <h1 className="text-center text-5xl mt-28">Teachers' List</h1>
         {/* <h1 className="text-center text-1xl ">HSC</h1> */}
-        <img src={t1} alt="" className="px-28 py-5" />
-        <img src={t3} alt="" className="px-28 py-5" />
-        <img src={t4} alt="" className="px-28" />
-        <img src={t2} alt="" className="px-28 py-5" />
+        <img src={t1} alt="" className="px-5 py-5" />
+        <img src={t3} alt="" className="px-5 py-5" />
+        <img src={t4} alt="" className="px-5" />
+        <img src={t2} alt="" className="px-5 py-5" />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const AboutUs = () => {
       }}
       className=" "
     >
-      <h1 className="text-center text-5xl mt-60">About Us</h1>
+      <h1 className="text-center text-5xl mt-28">About Us</h1>
       <div style={{ width: '95%', height: '95%' }}>
         <img src={about} alt="" className="pt-10" />
       </div>
