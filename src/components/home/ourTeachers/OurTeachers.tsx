@@ -800,10 +800,8 @@ const OurTeachers = () => {
               </ul>
               <div className="details">
                 <h2>
-                  Shahinur Rahman Shabuz{' '}
-                  <span className="job-title">
-                    Lecturer: Production, Management & Marketing
-                  </span>{' '}
+                  Shahanur Rahman Shabuz
+                  <span className="job-title">Marketing</span>{' '}
                 </h2>
               </div>
             </div>

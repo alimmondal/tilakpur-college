@@ -3,8 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
-  height: 800px;
+  /* padding: 0 30px; */
+  height: 100vh;
   position: relative;
   z-index: 1;
 }
@@ -25,7 +25,7 @@
 
 .videoBg {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
   background: #232a34;

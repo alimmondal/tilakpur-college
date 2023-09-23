@@ -1,0 +1,24 @@
+.footers {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+/* .privacy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+} */
+
+@media screen and (max-width: 460px) {
+  .footers {
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+  }
+  /* .privacy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+}

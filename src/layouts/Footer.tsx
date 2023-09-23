@@ -5,26 +5,22 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <div className="bg-[#242630] text-secondary p-20 mt-44">
-      <div className="flex justify-between">
-        <div className="flex gap-3 items-center justify-center">
-          {/* <img className="h-8" src={logo} alt="log" /> */}
-          <BiBookReader className="text-white text-5xl" />{' '}
-          <h1 className="text-white text-2xl">Tilakpur Degree College</h1>
+    <div className=" bg-[#242630] text-secondary p-10 sm:p-5 mt-44">
+      <div className="footers w-full flex justify-between items-center p-7 sm: flex-wrap sm:p-0">
+        <div className="flex justify-center items-center ">
+          <BiBookReader className="text-white text-5xl" />
+          <h1 className="text-white text-3xl ">TDC</h1>
         </div>
         <div className="flex gap-20">
           <ul className="space-y-2">
-            <li>Upcoming</li>
+            <li>Notice</li>
             <li>About Us</li>
-            <li>How it works</li>
+            <li>Contact Us</li>
           </ul>
           <ul className="space-y-2">
-            <li>Support</li>
-            <li>Careers</li>
-          </ul>
-          <ul className="space-y-2">
-            <li>List your gear</li>
-            <li>Contact team</li>
+            <li>Exam Routine</li>
+            <li>HSC Class Routine</li>
+            <li>Degree Class Routine</li>
           </ul>
         </div>
         <div className="flex gap-2 text-2xl">
@@ -32,10 +28,10 @@ export default function Footer() {
           <RiInstagramLine />
         </div>
       </div>
-      <div className="flex w-full mt-20 gap-5">
+      <div className="flex gap-5 hover: bg-red sm:flex-wrap mt-10 privacy">
         <p>Privacy Policy</p>
         <p>Terms & Condition</p>
-        <p className="ml-auto"> &#169; College-Net {year}</p>
+        <p className="ml-auto">&#169; Tdc-{year}</p>
       </div>
     </div>
   );

@@ -28,8 +28,8 @@ const AboutUs = () => {
 
   return (
     // <div className="">
-    <div className="container">
-      <div className=" aboutUs columns-2 py-20 items-center justify-items-center ">
+    <div className="">
+      <div className="container aboutUs columns-2 py-20 justify-between items-center ">
         <div className=" w-full">
           <Slider {...settings}>
             {images.map((img, idx) => {
